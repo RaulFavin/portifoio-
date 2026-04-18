@@ -16,6 +16,7 @@ export function AboveDrinkDisplay({ href, alt, title, description }: AboveDrinkD
           alt={alt}
           fill
           className="z-1 object-cover object-center"
+          priority
         />
       </div>
       <div className="bg-background py-2 px-4 border border-primary z-2 w-[160px] absolute -left-10 -bottom-10">
