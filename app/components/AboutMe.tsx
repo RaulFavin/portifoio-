@@ -29,8 +29,8 @@ export function AboutMe () {
               fill
               className="z-1 object-cover object-center"
             />
-            <span className="absolute z-2 bottom-0 left-0 right-0 flex items-center gap-2 text-sm text-primary px-4 py-3 bg-linear-to-t from-background to-transparent">
-              <Icon name="Location" />
+            <span className="absolute z-2 bottom-0 left-0 right-0 flex items-center gap-2 text-sm text-primary-light px-4 py-3 bg-linear-to-t from-background to-transparent">
+              <Icon name="Location" className="text-primary" />
               Maynooth, Ireland → Málaga, Spain
             </span>
           </div>
