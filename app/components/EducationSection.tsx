@@ -70,9 +70,13 @@ export function EducationSection() {
           <h4 className="uppercase text-sm font-sans text-foreground/50 tracking-widest mb-6">Certifications</h4>
           <ul className="flex flex-col gap-4">
             {certifications.map((cert, index) => (
-              <li key={index} className="flex items-center justify-between py-4 border-b border-primary/10">
-                <span className="font-sans text-md">{cert.title}</span>
-                <span className="text-sm text-primary font-semibold">{cert.year}</span>
+              <li key={index} className="flex flex-col gap-1 py-4 border-b border-primary/10">
+                <div className="flex items-center justify-between">
+                  <span className="font-sans text-md">{cert.title}</span>
+                  <span className="text-sm text-primary font-semibold whitespace-nowrap ml-4">{cert.year}</span>
+                </div>
+                <span className="text-xs text-foreground/50">{cert.institution}</span>
+                <p className="text-sm text-foreground/70 mt-1">{cert.description}</p>
               </li>
             ))}
           </ul>
