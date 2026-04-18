@@ -24,7 +24,7 @@ export function AboutMe () {
           <div className="absolute inset-0 -translate-x-8 -translate-y-4 border border-primary/20 pointer-events-none" />
           <div className="w-full h-170 relative overflow-hidden">
             <Image
-              src="/about-me.webp"
+              src="/about-me.jpg"
               alt="About me"
               fill
               className="z-1 object-cover object-center"
