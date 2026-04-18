@@ -1,6 +1,5 @@
 import { LinkButton } from "@/components/LinkButton"
 import { AboveDrinkCarousel } from "./AboveDrinkCarousel"
-import { AboveScrollDownIndicator } from "./AbouveScrollDownIndicator"
 
 const bulletPoints  = [
   "Head Mixologist",
