@@ -5,6 +5,7 @@ import { useEffect, useState } from "react"
 import Link from "next/link"
 import { AnchorButton } from "@/components/AnchorButton"
 import { Icon } from "@/components/icons"
+import Logo from '@/public/logo.svg'
 
 const navItems = [
   { label: 'About', href: '#about' },
@@ -31,9 +32,7 @@ export function Header() {
       ].join(' ')}
     >
       <div className="container h-full flex items-center justify-between px-4 lg:px-8">
-        <span className="font-sans font-semibold text-lg text-primary uppercase tracking-widest text-foreground whitespace-nowrap">
-          Raul Favin
-        </span>
+        <Logo />
         <nav className="hidden sm:flex items-center gap-8">
           {navItems.map(({ label, href }) => (
             <Link
