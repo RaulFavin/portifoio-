@@ -47,7 +47,7 @@ export function AboveTheFold() {
       className="relative"
     >
       <div
-        className="absolute z-1 top-0 left-0 w-full h-full opacity-8"
+        className="absolute z-1 top-0 left-0 w-full h-full opacity-10 lg:opacity-8"
         style={{
           backgroundImage: "url('/above-bg.webp')",
           backgroundSize: "cover",
@@ -74,7 +74,7 @@ export function AboveTheFold() {
               <p className="text-lg">
                 Over five years of bar experience, including two years crafting award-worthy cocktails at the Arkle Bar 
                 & Restaurant, Glenroyal Hotel. Creator of the <span className="italic text-primary-light font-semibold">Raspberry Shoda</span> — for a while the hotel's top-selling cocktail. 
-                Now bringing that craft to Málaga, Spain.
+                Now bringing that craft to <span className="text-primary">Málaga, Spain</span>.
               </p>
             </div>
             <div className="grid gap-4 w-full sm:w-fit sm:grid-cols-2">
