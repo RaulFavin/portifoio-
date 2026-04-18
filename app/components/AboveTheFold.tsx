@@ -90,9 +90,6 @@ export function AboveTheFold() {
             </div>
           </div>
         </div>
-        <div className="relative -bottom-8 flex flex-col items-center gap-2">
-          <AboveScrollDownIndicator />
-        </div>
       </section>
     </div>
   )
