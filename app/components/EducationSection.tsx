@@ -42,7 +42,7 @@ export function EducationSection() {
       <h2 className="uppercase text-primary text-sm font-sans pb-4 tracking-widest">
         Background
       </h2>
-      <h3 className="text-[64px] font-sans leading-[1] mb-8">Education &amp; Certifications</h3>
+      <h3 className="text-[42px] md:text-[64px] font-sans leading-[1] mb-8">Education &amp; Certifications</h3>
 
       <div className="h-px w-full bg-linear-to-r from-transparent via-primary to-transparent mb-8" />
 
