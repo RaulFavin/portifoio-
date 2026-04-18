@@ -85,7 +85,7 @@ export function AboveTheFold() {
                 variant="outline"
                 href="#contact"
                 className="text-center"
-              >Open to work</LinkButton>
+              >View my work</LinkButton>
             </div>
           </div>
         </div>
