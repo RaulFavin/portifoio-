@@ -83,13 +83,13 @@ export function Header() {
               {label}
             </Link>
           ))}
-          <LinkButton 
-            href="#contact" 
+          <AnchorButton 
             className="flex justify-center py-2"
             headIcon="Linkedin"
+            href="https://www.linkedin.com/in/raul-favin" 
           >
             Contact
-          </LinkButton>
+          </AnchorButton>
         </nav>
       </div>
     </header>
