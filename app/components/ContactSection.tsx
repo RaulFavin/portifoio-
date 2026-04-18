@@ -2,10 +2,11 @@ import { Icon } from "@/components/icons"
 
 const links = [
   { icon: 'Mail' as const, label: 'Email', href: 'mailto:raulfavin@email.com' },
-  { icon: 'WhatsApp' as const, label: 'WhatsApp', href: 'https://wa.me/55XXXXXXXXXXX', target: '_blank' },
+  { icon: 'WhatsApp' as const, label: 'WhatsApp', href: 'https://wa.me/55XXXXXXXXXXX', target: '_blank', rel: 'noopener noreferrer' },
   { icon: 'Phone' as const, label: 'Phone', href: 'tel:+55XXXXXXXXXXX' },
-  { icon: 'Linkedin' as const, label: 'LinkedIn', href: 'https://linkedin.com/in/raulfavin', target: '_blank' },
-  { icon: 'Download' as const, label: 'Download CV', href: '/cv-raul-favin.pdf', target: '_blank' },
+  { icon: 'Linkedin' as const, label: 'LinkedIn', href: 'https://linkedin.com/in/raulfavin', target: '_blank', rel: 'noopener noreferrer' },
+  { icon: 'Download' as const, label: 'CV - ES', href: '/Resume-RaulFavin.pdf', download: true },
+  { icon: 'Download' as const, label: 'CV - EN', href: '/Resume-RaulFavin-English.pdf', download: true },
 ]
 
 export function ContactSection() {
@@ -30,16 +31,17 @@ export function ContactSection() {
         </p>
 
         <div className="flex items-center gap-6 flex-wrap justify-center mt-4">
-          {links.map(({ icon, label, href, target }) => (
+          {links.map(({ icon, label, ...otherProps }) => (
             <a
               key={label}
-              href={href}
-              target={target}
-              rel={target === '_blank' ? 'noopener noreferrer' : undefined}
+              {...otherProps}
               aria-label={label}
-              className="flex items-center justify-center w-12 h-12 border border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors"
+              className="flex flex-col items-center gap-2 text-primary hover:text-primary/70 transition-colors group"
             >
-              <Icon name={icon} size={20} />
+              <span className="flex items-center justify-center w-12 h-12 border border-primary/30 group-hover:border-primary/60 transition-colors">
+                <Icon name={icon} size={20} />
+              </span>
+              <span className="text-xs font-sans uppercase tracking-widest">{label}</span>
             </a>
           ))}
         </div>
