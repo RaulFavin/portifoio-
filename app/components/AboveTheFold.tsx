@@ -46,7 +46,7 @@ export function AboveTheFold() {
       className="relative"
     >
       <div
-        className="absolute z-1 top-0 left-0 w-full h-full opacity-10 lg:opacity-8"
+        className="absolute z-1 top-0 left-0 w-full h-full opacity-16 lg:opacity-8"
         style={{
           backgroundImage: "url('/above-bg.webp')",
           backgroundSize: "cover",
