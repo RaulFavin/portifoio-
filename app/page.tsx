@@ -1,6 +1,7 @@
 import { AboutMe } from "./components/AboutMe";
 import { AboveTheFold } from "./components/AboveTheFold";
 import { CarrierSection } from "./components/CarrierSection";
+import { EducationSection } from "./components/EducationSection";
 import { Header } from "./components/Header";
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
       <AboveTheFold />
       <AboutMe />
       <CarrierSection />
+      <EducationSection />
     </main>
   );  
 }
