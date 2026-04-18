@@ -5,6 +5,7 @@ import "./globals.css";
 const playfair = Playfair({
   variable: "--font-playfair",
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600"],
 });
 
 
