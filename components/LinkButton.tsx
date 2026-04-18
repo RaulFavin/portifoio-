@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 import Link, { LinkProps } from "next/link";
 import { PropsWithChildren } from "react";
+import { Icon, IconNames } from "./icons";
 
 
 
@@ -13,6 +14,7 @@ const variants = {
 interface LinkButtonProps extends LinkProps {
   className?: string
   variant?: keyof typeof variants
+  headIcon?: IconNames
 }
 
 export function LinkButton (props: PropsWithChildren<LinkButtonProps>) {
@@ -20,6 +22,7 @@ export function LinkButton (props: PropsWithChildren<LinkButtonProps>) {
     children, 
     className, 
     variant = 'fill',
+    headIcon,
     ...otherProps 
   } = props
 
@@ -31,10 +34,13 @@ export function LinkButton (props: PropsWithChildren<LinkButtonProps>) {
       {...otherProps}
       className={cn(
         currentVariant,
-        'px-[32px] py-[12px] text-md uppercase font-sans! font-semibold outline-none whitespace-nowrap',
+        'px-[32px] py-[12px] text-md uppercase font-sans! font-semibold outline-none whitespace-nowrap flex items-center gap-2 leading-none',
         className,
       )}
     >
+      {headIcon && (
+        <Icon name={headIcon} size={16} />
+      )}
       {children}
     </Link>
   )
