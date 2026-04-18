@@ -38,7 +38,7 @@ export function CarrierSection() {
       <ul className="flex flex-col">
         {timeline.map((item, index) => (
           <li key={index}>
-            <div className="grid grid-cols-[180px_1fr] gap-8 py-8">
+            <div className="flex flex-col gap-1 sm:grid sm:grid-cols-[180px_1fr] sm:gap-8 py-8">
               <span className="text-sm text-primary font-sans font-semibold leading-snug">
                 {item.period}
               </span>
