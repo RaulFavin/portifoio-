@@ -7,6 +7,7 @@ import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 import { LanguagesSection } from "./components/LanguagesSection";
 import { SeasonalSection } from "./components/SeasonalSection";
+import { SignatureSection } from "./components/SignatureSection";
 
 export const metadata = {
   title: 'Raul Favin | Mixologist Portfolio',
@@ -18,6 +19,7 @@ export default function Home() {
       <Header />
       <AboveTheFold />
       <AboutMe />
+      <SignatureSection />
       <SeasonalSection />
       <CarrierSection />
       <EducationSection />
