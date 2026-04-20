@@ -10,47 +10,18 @@ import { LinkButton } from "@/components/LinkButton"
 const featuredNotes = [
   {
     label: 'Elderflower',
-    icon: (
-      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-        <path d="M12 5a3 3 0 1 1 3 3m-3-3a3 3 0 1 0-3 3m3-3v1M9 8a3 3 0 1 0 3 3M9 8h1m5 0a3 3 0 1 1-3 3m3-3h-1m-2 3v-1" />
-        <circle cx="12" cy="8" r="2" />
-        <path d="M12 10v12" />
-      </svg>
-    ),
   },
   {
     label: 'Rose water',
-    icon: (
-      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-        <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
-      </svg>
-    ),
   },
   {
     label: 'Fresh raspberry',
-    icon: (
-      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-        <circle cx="12" cy="12" r="3" />
-        <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2" />
-      </svg>
-    ),
   },
   {
     label: 'Lemon citrus',
-    icon: (
-      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-        <circle cx="12" cy="12" r="10" />
-        <path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01" />
-      </svg>
-    ),
   },
   {
     label: 'Sparkling soda',
-    icon: (
-      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-        <path d="M12 2v6M12 22v-6M4.93 4.93l4.24 4.24M14.83 14.83l4.24 4.24M2 12h6M22 12h-6M4.93 19.07l4.24-4.24M14.83 9.17l4.24-4.24" />
-      </svg>
-    ),
   },
 ]
 
@@ -63,36 +34,15 @@ const secondaryCards = [
     notes: [
       {
         label: 'Campari bitter',
-        icon: (
-          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-            <path d="M8 3c0 2 2 4 4 4s4-2 4-4M12 7v10M5 21c1-3 3-5 7-5s6 2 7 5" />
-          </svg>
-        ),
       },
       {
         label: 'Cherrywood smoke',
-        icon: (
-          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-            <path d="M3 3c3 2 4 5 3 8M7 3c2 3 2 6 0 9M11 3c1 4 0 7-2 9" />
-          </svg>
-        ),
       },
       {
         label: 'Sweet vermouth',
-        icon: (
-          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-            <circle cx="12" cy="12" r="10" />
-          </svg>
-        ),
       },
       {
         label: 'Orange peel',
-        icon: (
-          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-            <circle cx="12" cy="12" r="10" />
-            <path d="M8 14s1.5 2 4 2 4-2 4-2" />
-          </svg>
-        ),
       },
     ],
   },
@@ -262,13 +212,12 @@ export function SignatureSection() {
                 Tasting Notes
               </p>
               <ul className="flex flex-wrap gap-2 mb-8 sm:mb-11">
-                {featuredNotes.map(({ label, icon }) => (
+                {featuredNotes.map(({ label }) => (
                   <li
                     key={label}
                     className="inline-flex items-center gap-1.5 text-xs font-medium text-primary-light border border-primary/[0.22] px-3 py-1 transition-colors hover:bg-primary/10 hover:border-primary/40"
                     style={{ background: 'rgba(201,146,42,0.05)', backdropFilter: 'blur(8px)' }}
                   >
-                    <span className="opacity-60">{icon}</span>
                     {label}
                   </li>
                 ))}
@@ -314,13 +263,12 @@ export function SignatureSection() {
                   {card.desc}
                 </p>
                 <ul className="flex flex-wrap gap-1.5" aria-label="Tasting notes">
-                  {card.notes.map(({ label, icon }) => (
+                  {card.notes.map(({ label }) => (
                     <li
                       key={label}
                       className="inline-flex items-center gap-1 text-[0.7rem] text-primary-light border border-primary/[0.15] px-2.5 py-1 transition-colors group-hover:bg-primary/[0.07] group-hover:border-primary/[0.28]"
                       style={{ background: 'rgba(201,146,42,0.04)', backdropFilter: 'blur(6px)' }}
                     >
-                      <span className="opacity-50">{icon}</span>
                       {label}
                     </li>
                   ))}
