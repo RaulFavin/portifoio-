@@ -246,7 +246,7 @@ export function SignatureSection() {
                 aria-label={card.name}
               >
                 <div className="flex items-center justify-between mb-8">
-                  <span className="font-sans text-[0.72rem] font-normal leading-none tracking-[0.12em]" style={{ color: 'rgba(201,146,42,0.45)' }} aria-hidden="true">
+                  <span className="font-sans text-2xl font-normal leading-none tracking-[0.12em]" style={{ color: 'rgba(201,146,42,0.45)' }} aria-hidden="true">
                     {card.num}
                   </span>
                   <span
