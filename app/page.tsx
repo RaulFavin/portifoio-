@@ -3,6 +3,7 @@ import { AboveTheFold } from "./components/AboveTheFold";
 import { CarrierSection } from "./components/CarrierSection";
 import { ContactSection } from "./components/ContactSection";
 import { EducationSection } from "./components/EducationSection";
+import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 import { LanguagesSection } from "./components/LanguagesSection";
 import { SeasonalSection } from "./components/SeasonalSection";
@@ -22,6 +23,7 @@ export default function Home() {
       <EducationSection />
       <LanguagesSection />
       <ContactSection />
+      <Footer />
     </main>
   );  
 }
