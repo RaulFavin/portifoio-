@@ -2,9 +2,9 @@ import { Icon } from "@/components/icons"
 
 const links = [
   { icon: 'Mail' as const, label: 'Email', href: 'mailto:raulfavin@email.com' },
-  { icon: 'WhatsApp' as const, label: 'WhatsApp', href: 'https://wa.me/55XXXXXXXXXXX', target: '_blank', rel: 'noopener noreferrer' },
-  { icon: 'Phone' as const, label: 'Phone', href: 'tel:+55XXXXXXXXXXX' },
-  { icon: 'Linkedin' as const, label: 'LinkedIn', href: 'https://linkedin.com/in/raulfavin', target: '_blank', rel: 'noopener noreferrer' },
+  { icon: 'WhatsApp' as const, label: 'WhatsApp', href: 'https://wa.me/353834307793', target: '_blank', rel: 'noopener noreferrer' },
+  { icon: 'Phone' as const, label: 'Phone', href: 'tel:+353834307793' },
+  { icon: 'Linkedin' as const, label: 'LinkedIn', href: 'https://www.linkedin.com/in/raul-favin', target: '_blank', rel: 'noopener noreferrer' },
   { icon: 'Download' as const, label: 'CV - ES', href: '/Resume-RaulFavin.pdf', download: true },
   { icon: 'Download' as const, label: 'CV - EN', href: '/Resume-RaulFavin-English.pdf', download: true },
 ]
