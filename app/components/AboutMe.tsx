@@ -1,4 +1,5 @@
 import { Icon } from "@/components/icons";
+import { FadeInOnScroll } from "@/lib/FadeInOnScroll";
 import Image from "next/image";
 
 const blocks = [
@@ -39,23 +40,29 @@ export function AboutMe () {
           <h2 className="uppercase text-primary text-sm font-sans pb-4">About me</h2>
           <h3 className="text-[48px] font-sans leading-[48px] ">Crafting Experiences,<br /><span className="text-primary">Not Just Cocktails</span></h3>
           <div className="hidden lg:block h-px w-full bg-linear-to-r from-transparent via-primary to-transparent my-4" />
-          <p className="text-md pb-6 pt-8">
+          <FadeInOnScroll>
+            <p className="text-md pb-6 pt-8">
         With over five years of bar and hotel experience, two of which I served as Head Mixologist 
         at the prestigious Arkle Bar & Restaurant within the Glenroyal Hotel in Maynooth, Ireland — one 
         of the country&apos;s finest 4-star hotel properties. In that role I was responsible for the full cocktail 
         programme: from menu conception and ingredient sourcing to team training and guest experience.
-          </p>
-          <p className="text-md">
+            </p>
+          </FadeInOnScroll>
+          <FadeInOnScroll>
+            <p className="text-md">
         My pt-8 philosophy is simple: every glass tells a story. Whether it is a classic reimagined with an Irish twist or 
         a seasonal creation built around a moment in the calendar, I believe a great cocktail should surprise, delight, 
         and be remembered long after the last sip.
-          </p>
+            </p>
+          </FadeInOnScroll>
           <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
             {blocks.map((block, index) => (
-              <li key={index} className="flex flex-col gap-2">
-                <span className="text-[42px] font-sans text-primary">{block.title}</span>
-                <p className="text-sm">{block.description}</p>
-              </li>
+              <FadeInOnScroll key={index}>
+                <li className="flex flex-col gap-2">
+                  <span className="text-[42px] font-sans text-primary">{block.title}</span>
+                  <p className="text-sm">{block.description}</p>
+                </li>
+              </FadeInOnScroll>
             ))}
           </ul>
         </div>
