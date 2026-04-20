@@ -1,3 +1,5 @@
+import { FadeInOnScroll } from "../../lib/FadeInOnScroll"
+
 const timeline = [
   {
     period: 'Feb 2024 – Present',
@@ -37,21 +39,23 @@ export function CarrierSection() {
 
       <ul className="flex flex-col">
         {timeline.map((item, index) => (
-          <li key={index}>
-            <div className="flex flex-col gap-1 sm:grid sm:grid-cols-[180px_1fr] sm:gap-8 py-8">
-              <span className="text-sm text-primary font-sans font-semibold leading-snug">
-                {item.period}
-              </span>
-              <div className="flex flex-col gap-1">
-                <strong className="text-xl font-sans font-normal">{item.role}</strong>
-                <span className="text-sm text-primary">{item.place}</span>
-                <p className="text-md mt-2 text-foreground/80">{item.description}</p>
+          <FadeInOnScroll key={index}>
+            <li>
+              <div className="flex flex-col gap-1 sm:grid sm:grid-cols-[180px_1fr] sm:gap-8 py-8">
+                <span className="text-sm text-primary font-sans font-semibold leading-snug">
+                  {item.period}
+                </span>
+                <div className="flex flex-col gap-1">
+                  <strong className="text-xl font-sans font-normal">{item.role}</strong>
+                  <span className="text-sm text-primary">{item.place}</span>
+                  <p className="text-md mt-2 text-foreground/80">{item.description}</p>
+                </div>
               </div>
-            </div>
-            {index < timeline.length - 1 && (
-              <div className="h-px w-full bg-linear-to-r from-transparent via-primary/20 to-transparent" />
-            )}
-          </li>
+              {index < timeline.length - 1 && (
+                <div className="h-px w-full bg-linear-to-r from-transparent via-primary/20 to-transparent" />
+              )}
+            </li>
+          </FadeInOnScroll>
         ))}
       </ul>
     </section>

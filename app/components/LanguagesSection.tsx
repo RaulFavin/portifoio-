@@ -1,3 +1,5 @@
+import { FadeInOnScroll } from "@/lib/FadeInOnScroll"
+
 const languages = [
   { name: 'Portuguese', level: 'Native' },
   { name: 'English', level: 'C1 – Fluent' },
@@ -16,13 +18,14 @@ export function LanguagesSection() {
 
       <ul className="flex flex-col">
         {languages.map((lang, index) => (
-          <li
-            key={lang.name}
-            className="flex items-center justify-between py-6 border-b border-primary/10"
-          >
-            <span className="font-sans text-xl">{lang.name}</span>
-            <span className="text-sm text-primary font-semibold">{lang.level}</span>
-          </li>
+          <FadeInOnScroll key={index}>
+            <li
+              className="flex items-center justify-between py-6 border-b border-primary/10"
+            >
+              <span className="font-sans text-xl">{lang.name}</span>
+              <span className="text-sm text-primary font-semibold">{lang.level}</span>
+            </li>
+          </FadeInOnScroll>
         ))}
       </ul>
     </section>

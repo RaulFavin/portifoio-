@@ -1,4 +1,5 @@
 import { Icon } from "@/components/icons"
+import { FadeInOnScroll } from "@/lib/FadeInOnScroll"
 
 const links = [
   { icon: 'Mail' as const, label: 'Email', href: 'mailto:raulfavin@email.com' },
@@ -23,12 +24,16 @@ export function ContactSection() {
       <div className="h-px w-full bg-linear-to-r from-transparent via-primary to-transparent mb-12" />
 
       <div className="flex flex-col items-center gap-8 max-w-2xl">
-        <p className="text-md text-foreground/80 leading-relaxed">
+        <FadeInOnScroll>
+          <p className="text-md text-foreground/80 leading-relaxed">
           After two remarkable years building the cocktail programme at Glenroyal Hotel, I am relocating to Málaga, Spain, and actively seeking my next challenge. I am open to roles as Head Mixologist, Bar Manager, or Senior Bartender at hotels, resorts, and cocktail bars in the Málaga area.
-        </p>
-        <p className="text-md text-foreground/80 leading-relaxed">
-          If you are looking for someone who brings creativity, precision, and a proven track record of creating cocktails that guests keep coming back for — let&apos;s talk.
-        </p>
+          </p>
+        </FadeInOnScroll>
+        <FadeInOnScroll>
+          <p className="text-md text-foreground/80 leading-relaxed">
+            If you are looking for someone who brings creativity, precision, and a proven track record of creating cocktails that guests keep coming back for — let&apos;s talk.
+          </p>
+        </FadeInOnScroll>
 
         <div className="flex items-center gap-6 flex-wrap justify-center mt-4">
           {links.map(({ icon, label, ...otherProps }) => (

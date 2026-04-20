@@ -1,3 +1,5 @@
+import { FadeInOnScroll } from "@/lib/FadeInOnScroll"
+
 const education = [
   {
     period: 'Feb 2019 – Dec 2022',
@@ -49,20 +51,22 @@ export function EducationSection() {
       <div className="grid lg:grid-cols-2 gap-16">
         <ul className="flex flex-col">
           {education.map((item, index) => (
-            <li key={index}>
-              <div className="py-8 flex flex-col gap-1">
-                <span className="text-sm text-primary font-sans font-semibold">{item.period}</span>
-                <strong className="text-xl font-sans font-normal">{item.title}</strong>
-                <span className="text-sm text-primary">{item.institution}</span>
-                {'credential' in item && item.credential && (
-                  <span className="text-xs text-foreground/50">{item.credential}</span>
+            <FadeInOnScroll key={index}>
+              <li>
+                <div className="py-8 flex flex-col gap-1">
+                  <span className="text-sm text-primary font-sans font-semibold">{item.period}</span>
+                  <strong className="text-xl font-sans font-normal">{item.title}</strong>
+                  <span className="text-sm text-primary">{item.institution}</span>
+                  {'credential' in item && item.credential && (
+                    <span className="text-xs text-foreground/50">{item.credential}</span>
+                  )}
+                  <p className="text-md mt-2 text-foreground/80">{item.description}</p>
+                </div>
+                {index < education.length - 1 && (
+                  <div className="h-px w-full bg-linear-to-r from-primary/20 to-transparent" />
                 )}
-                <p className="text-md mt-2 text-foreground/80">{item.description}</p>
-              </div>
-              {index < education.length - 1 && (
-                <div className="h-px w-full bg-linear-to-r from-primary/20 to-transparent" />
-              )}
-            </li>
+              </li>
+            </FadeInOnScroll>
           ))}
         </ul>
 
@@ -70,14 +74,16 @@ export function EducationSection() {
           <h4 className="uppercase text-sm font-sans text-foreground/50 tracking-widest mb-6">Certifications</h4>
           <ul className="flex flex-col gap-4">
             {certifications.map((cert, index) => (
-              <li key={index} className="flex flex-col gap-1 py-4 border-b border-primary/10">
-                <div className="flex items-center justify-between">
-                  <span className="font-sans text-md">{cert.title}</span>
-                  <span className="text-sm text-primary font-semibold whitespace-nowrap ml-4">{cert.year}</span>
-                </div>
-                <span className="text-xs text-foreground/50">{cert.institution}</span>
-                <p className="text-sm text-foreground/70 mt-1">{cert.description}</p>
-              </li>
+              <FadeInOnScroll key={index}>
+                <li className="flex flex-col gap-1 py-4 border-b border-primary/10">
+                  <div className="flex items-center justify-between">
+                    <span className="font-sans text-md">{cert.title}</span>
+                    <span className="text-sm text-primary font-semibold whitespace-nowrap ml-4">{cert.year}</span>
+                  </div>
+                  <span className="text-xs text-foreground/50">{cert.institution}</span>
+                  <p className="text-sm text-foreground/70 mt-1">{cert.description}</p>
+                </li>
+              </FadeInOnScroll>
             ))}
           </ul>
         </div>
