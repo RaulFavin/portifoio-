@@ -1,8 +1,11 @@
 'use client'
 
+'use client'
+
 import Image from "next/image"
 import { useRef, useState } from "react"
 import { FadeInOnScroll } from "@/lib/FadeInOnScroll"
+import { LinkButton } from "@/components/LinkButton"
 
 const featuredNotes = [
   {
@@ -270,16 +273,9 @@ export function SignatureSection() {
                   </li>
                 ))}
               </ul>
-              <a
-                href="/cocktails"
-                className="self-start inline-flex items-center gap-1.5 border border-primary text-primary text-[0.8rem] font-bold uppercase tracking-[0.06em] px-6 py-2.5 hover:opacity-70 transition-opacity"
-                aria-label="View all 9 cocktails in the full catalog"
-              >
+              <LinkButton href="/cocktails" variant="outline" className="self-start">
                 See full catalog
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </a>
+              </LinkButton>
             </div>
           </article>
         </FadeInOnScroll>
@@ -347,19 +343,11 @@ export function SignatureSection() {
             <p className="text-sm text-muted-foreground">
               Showing <span className="text-primary-light">3 of 9 cocktails</span> — signature, classics, mocktails &amp; spritzes
             </p>
-            <a
-              href="/cocktails"
-              className="inline-flex items-center gap-1.5 border border-primary text-primary text-[0.8rem] font-bold uppercase tracking-[0.06em] px-6 py-2.5 hover:opacity-70 transition-opacity"
-              aria-label="View all 9 cocktails in the full catalog"
-            >
+            <LinkButton href="/cocktails" variant="outline">
               View Full Catalog
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-            </a>
+            </LinkButton>
           </div>
         </FadeInOnScroll>
-
       </div>
     </section>
   )
