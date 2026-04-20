@@ -18,7 +18,7 @@ const blocks = [
 
 export function AboutMe () {
   return (
-    <section className="container py-[96px] px-4">
+    <section id="about" className="container py-[96px] px-4">
       <div className="grid lg:grid-cols-2 gap-8">
         <div className="relative ">
           <div className="absolute inset-0 -translate-x-8 -translate-y-4 border border-primary/20 pointer-events-none" />
