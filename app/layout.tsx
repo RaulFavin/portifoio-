@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Playfair, DM_Sans } from "next/font/google";
 import "./globals.css";
+import { GoogleAnalytics  } from '@next/third-parties/google'
 
 const playfair = Playfair({
   variable: "--font-playfair",
@@ -30,6 +31,9 @@ export default function RootLayout({
       lang="en"
       className={`${playfair.variable} ${dmSans.variable} h-full antialiased`}
     >
+      {process.env.NODE_ENV === "production" && process.env.NEXT_PUBLIC_GA_TRACKING_ID && (
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_TRACKING_ID!} />
+      )}
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
