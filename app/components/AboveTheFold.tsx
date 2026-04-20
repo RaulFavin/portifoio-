@@ -46,14 +46,14 @@ export function AboveTheFold() {
       className="relative"
     >
       <div
-        className="absolute z-1 top-0 left-0 w-full h-full opacity-16 lg:opacity-8"
+        className="absolute z-1 top-0 left-0 w-full h-full opacity-16 lg:opacity-17"
         style={{
           backgroundImage: "url('/above-bg.webp')",
           backgroundSize: "cover",
         }}
       />
       <div className="absolute inset-0 z-1 bg-linear-to-r from-background to-transparent pointer-events-none" />
-      <div className="hidden lg:block absolute right-16 bottom-16 2xl:top-0">
+      <div className="hidden lg:block absolute right-16 bottom-16 2xl:top-5">
         <AboveDrinkCarousel items={carrouselItems} />
       </div>
       <section 
